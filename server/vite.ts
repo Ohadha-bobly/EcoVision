@@ -41,6 +41,7 @@ export async function setupVite(app: Express, server: Server) {
   });
 
   app.use(vite.middlewares);
+
   app.use("*", async (req, res, next) => {
     const url = req.originalUrl;
 
@@ -49,14 +50,14 @@ export async function setupVite(app: Express, server: Server) {
         import.meta.dirname,
         "..",
         "client",
-        "index.html",
+        "index.html"
       );
 
-      // always reload the index.html file from disk incase it changes
+      // Always reload the index.html file from disk in case it changes
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
       template = template.replace(
         `src="/src/main.tsx"`,
-        `src="/src/main.tsx?v=${nanoid()}"`,
+        `src="/src/main.tsx?v=${nanoid()}"`
       );
       const page = await vite.transformIndexHtml(url, template);
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
@@ -67,18 +68,25 @@ export async function setupVite(app: Express, server: Server) {
   });
 }
 
+/**
+ * ✅ Serve built frontend from correct folder
+ * In production, Vite builds to "dist/public"
+ * so we serve from that directory.
+ */
 export function serveStatic(app: Express) {
-  const distPath = path.resolve(import.meta.dirname, "..", "dist");
+  const distPath = path.resolve(import.meta.dirname, "..", "dist", "public");
 
   if (!fs.existsSync(distPath)) {
+    console.error(`❌ Could not find the build directory: ${distPath}`);
     throw new Error(
-      `Could not find the build directory: ${distPath}, make sure to build the client first`,
+      "Missing build output. Run 'npm run build' before starting the server."
     );
   }
 
+  // Serve all static files
   app.use(express.static(distPath));
 
-  // fall through to index.html if the file doesn't exist
+  // Fallback to index.html for SPA routes
   app.use("*", (_req, res) => {
     res.sendFile(path.resolve(distPath, "index.html"));
   });
