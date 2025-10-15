@@ -127,7 +127,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 EcoVision. Educational clone for demonstration purposes only.</p>
+            <p>&copy; 2025 EcoVision. The environment program for all.</p>
           </div>
         </div>
       </footer>
