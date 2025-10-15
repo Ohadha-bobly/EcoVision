@@ -1,7 +1,82 @@
 EcoVision - Environmental Conservation Platform
 An educational environmental monitoring platform inspired by Plant-for-the-Planet. Track conservation projects worldwide using interactive satellite maps, real-time environmental data, and make pledges to support reforestation efforts.
 
-Features
+Features# 🌍 EcoVision - Environmental Conservation Platform  
+
+An educational environmental monitoring platform inspired by Plant-for-the-Planet.  
+Track conservation projects worldwide using interactive satellite maps, real-time environmental data, and make pledges to support reforestation efforts.  
+
+---
+
+## 🚀 Live Demo  
+👉 [**https://ecovision-gsmp.onrender.com**](https://ecovision-gsmp.onrender.com)  
+
+---
+
+## 📸 Preview  
+
+<p align="center">
+  <img src="https://github.com/Ohadha-bobly/EcoVision/assets/preview1.png" width="600" alt="EcoVision Dashboard Screenshot"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Ohadha-bobly/EcoVision/assets/preview2.png" width="600" alt="EcoVision Map View Screenshot"/>
+</p>
+
+> 🖼️ *(Add screenshots to your repo’s “assets” folder or upload them in GitHub Issues → copy their image URL and replace the ones above.)*
+
+---
+
+## ✨ Features  
+
+- 🗺️ **Interactive Maps** – Explore projects with OpenStreetMap, NASA GIBS satellite imagery, and OpenWeatherMap weather overlays  
+- 🌳 **Project Management** – Full CRUD admin interface for managing conservation projects  
+- 💚 **Pledge System** – Multi-step pledge flow with impact calculations  
+- 🔐 **Authentication** – Secure login and registration with Supabase  
+- 📊 **Real-time Data** – Track trees planted, area restored, and CO₂ offset  
+- 🌙 **Dark Mode** – Full dark mode support throughout the application  
+- 📱 **Responsive** – Mobile-friendly design that works on all devices  
+
+---
+
+## 🧱 Tech Stack  
+
+**Frontend:** React 18, TypeScript, Tailwind CSS, Shadcn UI  
+**Mapping:** Leaflet, React-Leaflet  
+**State Management:** TanStack Query (React Query)  
+**Forms:** React Hook Form + Zod  
+**Backend:** Express.js, Node.js  
+**Database:** PostgreSQL (Supabase)  
+**ORM:** Drizzle  
+
+---
+
+## ⚙️ Environment Variables  
+
+Copy `.env.example` → `.env` and fill in your credentials:  
+
+```bash
+# Database (Supabase)
+DATABASE_URL=postgresql://user:password@host:port/database
+
+# Supabase
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key
+
+# OpenWeatherMap API
+VITE_OPENWEATHER_API_KEY=your-openweathermap-api-key
+
+# Copernicus Dataspace
+DATASPACE_USERNAME=your-dataspace-email
+DATASPACE_PASSWORD=your-dataspace-password
+
+# NASA Earthdata
+NASA_EARTHDATA_USERNAME=your-nasa-username
+NASA_EARTHDATA_PASSWORD=your-nasa-password
+
+# Session Secret
+SESSION_SECRET=your-session-secret-here
+
 🗺️ Interactive Maps - Explore projects with OpenStreetMap, NASA GIBS satellite imagery, and OpenWeatherMap weather overlays
 🌳 Project Management - Full CRUD admin interface for managing conservation projects
 💚 Pledge System - Multi-step pledge flow with impact calculations
