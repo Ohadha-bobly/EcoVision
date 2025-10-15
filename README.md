@@ -13,19 +13,17 @@ Track conservation projects worldwide using interactive satellite maps, real-tim
 
 ---
 
-## 📸 Preview  
+<h2>📸 Project Screenshots</h2>
 
 <p align="center">
-  <img src="https://github.com/Ohadha-bobly/EcoVision/assets/preview1.png" width="600" alt="EcoVision Dashboard Screenshot"/>
+  <img src="https://raw.githubusercontent.com/Ohadha-bobly/EcoVision/main/Screenshots/home-view.png" width="45%" />
+  <img src="https://raw.githubusercontent.com/Ohadha-bobly/EcoVision/main/Screenshots/satellite-view.png" width="45%" />
 </p>
 
 <p align="center">
-  <img src="https://github.com/Ohadha-bobly/EcoVision/assets/preview2.png" width="600" alt="EcoVision Map View Screenshot"/>
+  <img src="https://raw.githubusercontent.com/Ohadha-bobly/EcoVision/main/Screenshots/project-details.png" width="45%" />
+  <img src="https://raw.githubusercontent.com/Ohadha-bobly/EcoVision/main/Screenshots/map-view.png" width="45%" />
 </p>
-
-> 🖼️ *(Add screenshots to your repo’s “assets” folder or upload them in GitHub Issues → copy their image URL and replace the ones above.)*
-
----
 
 ## ✨ Features  
 
